@@ -29,8 +29,8 @@ def remove_colunas(df):
 
 def rename_colunas(df):
 
-    if df is None or df.empty:  # ✅ Verifica se recebeu um DataFrame válido
-        raise ValueError("DataFrame vazio ou inválido recebido na função rename_columns")
+    if df is None or df.empty:
+        raise ValueError("DataFrame vazio ou inválido recebido na função rename_colunas")
     
     df["date_time"] =  pd.to_datetime(df[["year", "month", "day", "hour", "minute"]],  dayfirst=True)
 
